@@ -1,0 +1,110 @@
+{
+  "categories": [
+    {
+      "title": "Hiragana",
+      "color": "#68D1FF",
+      "videos":[
+        {
+          "title": "Aprenda Hiragana em uma semana",
+          "url": "https://www.youtube.com/watch?v=DnmayTs3VJo"
+        },
+        {
+          "title": "Aula dde Japonês (Aprender Hiragana de um jeito fácil)",
+          "url": "https://www.youtube.com/watch?v=tv2OOp3ycRE"
+        },
+        {
+          "title": "Aula 01: Hiragana (Alfabeto Japonês)",
+          "url": "https://www.youtube.com/watch?v=C3Cn3G4ia00"
+        },
+        {
+          "title": "Começando a aprender Japonês",
+          "url": "https://www.youtube.com/watch?v=PsJwRmYd9kU"
+        }
+      ] 
+    },
+    {
+      "title": "Katakana",
+      "color": "#00C86F",
+      "videos":[
+        {
+          "title": "Aula 03: Como ler o Katakana",
+          "url": "https://www.youtube.com/watch?v=d9BpFHwBmw4"
+        },
+        {
+          "title": "Vamos ler Katakana",
+          "url": "https://www.youtube.com/watch?v=kbZENDQm09c"
+        },
+        {
+          "title": "Dicas para aprender Hiragana e Katakana",
+          "url": "https://www.youtube.com/watch?v=5lKZC59hMMM"
+        },
+        {
+          "title": "O que é Katakana",
+          "url": "https://www.youtube.com/watch?v=Ly38aVJuhGU"
+        }
+      ]
+    },
+    {
+      "title": "Kanji",
+      "color": "#9cd33b",
+      "videos":[
+        {
+          "title": "Aula 04: Como aprender o Kanji",
+          "url": "https://www.youtube.com/watch?v=aCvnuPp566A"
+        },
+        {
+          "title": "Vamos ler Kanji #1",
+          "url": "https://www.youtube.com/watch?v=dVghwHj5MOo"
+        },
+        {
+          "title": "Como aprender o Kanji - Introdução",
+          "url": "https://www.youtube.com/watch?v=nX3cN38IfnI"
+        }
+      ]
+    },
+    {
+      "title": "Curiosidades",
+      "color": "#FFA500",
+      "videos":[
+        {
+          "title": "Comerciais japoneses: Loucos, Estranhos e Engraçados #1",
+          "url": "https://www.youtube.com/watch?v=bE9xcPI-OW0"
+        },
+        {
+          "title": "Curiosidades do Japão: Comida japonesa (Sukiya)",
+          "url": "https://www.youtube.com/watch?v=nQL_pmwEClA"
+        },
+        {
+          "title": "Motivação pra estudar",
+          "url": "https://www.youtube.com/watch?v=--uIrGP1hpU"
+        },
+        {
+          "title": "O que eu consigo comprar com um dia de trabalho no Japão (Mercado Japonês)",
+          "url": "https://www.youtube.com/watch?v=fih3yeEHBKk"
+        }
+      ]
+    },
+    {
+      "title": "Cultura Pop",
+      "color": "#FF0000",
+      "videos":[
+        {
+          "title": "FINAL FANTASY VII REMAKE テーマソング発表記念トレーラー",
+          "url": "https://www.youtube.com/watch?v=MDets1_G9gQ&t=5s"
+        },
+        {
+          "title": "Ghos of Tsushima - Official Japanese Trailer",
+          "url": "https://www.youtube.com/watch?v=vWJdKg5oy6g"
+        },
+        {
+          "title": "Ricardo Cruz - On The Rocks (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=NMMBGj0ejTU"
+        },
+        {
+          "title": "Demon Slayer - Kimetsu no Yaiba - The Movie: Mugen Train Official Trailer",
+          "url": "https://www.youtube.com/watch?v=ATJYac_dORw"
+        }
+      ]
+    }
+  ]
+}

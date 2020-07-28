@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Menu from './components/Menu'
-import dadosIniciais from './data/dados_iniciais.json'
+import Header from './components/Header'
+import initialDatas from './data/initial_datas.json'
 import BannerMain from './components/BannerMain';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer'
@@ -10,44 +10,33 @@ function App() {
   return (
 
     <div style={{ background: "#141414" }}>
-      <Menu />
+      <Header />
 
       <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é Front-end: Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotiina das desenvolvedoras. Mas o que eles fazem afinal? Descubra com Vanessa!"} 
+        videoTitle={initialDatas.categories[0].videos[3].title}
+        url={initialDatas.categories[0].videos[3].url}
+        videoDescription={"Para algumas pessoas, a língua japonesa parece ser tão complicada que fica difícil saber por onde começar. Aperte play que eu te mostro como fazer isso."} 
       />
 
       <Carousel 
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[0]}
+        category={initialDatas.categories[0]}
       />
-
       <Carousel 
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[1]}
+        category={initialDatas.categories[1]}
       />
-
       <Carousel 
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[2]}
+        category={initialDatas.categories[2]}
       />
-
       <Carousel 
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[3]}
+        category={initialDatas.categories[3]}
       />
-
       <Carousel 
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[4]}
+        category={initialDatas.categories[4]}
       />
 
-      <Carousel 
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[5]}
-      />
 
+
+    
       <Footer />   
     </div>
   );
