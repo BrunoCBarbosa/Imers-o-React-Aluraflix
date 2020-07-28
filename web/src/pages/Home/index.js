@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Header from './components/Header'
-import initialDatas from './data/initial_datas.json'
-import BannerMain from './components/BannerMain';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer'
+import Header from '../../components/Header'
+import initialDatas from '../../data/initial_datas.json'
+import BannerMain from '../../components/BannerMain';
+import Carousel from '../../components/Carousel';
+import Footer from '../../components/Footer'
 
-function App() {
+function Home() {
   return (
 
     <div style={{ background: "#141414" }}>
@@ -33,13 +33,10 @@ function App() {
       <Carousel 
         category={initialDatas.categories[4]}
       />
-
-
-
-    
+      
       <Footer />   
     </div>
   );
 }
 
-export default App;
+export default Home;

@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import logoImage from '../../assets/img/logo.png'
 import Button from '../Button'
-import { Logo, Menu } from './style'
+import './style.css'
 
 function Header(){
   return(
-    <Menu>
-      <a href="/">
-        <Logo className="logo" src={logoImage} alt="Aluraflix logo" />
-      </a>
+    <nav className="Menu">
+      <Link to="/">
+        <img className="Logo" src={logoImage} alt="Aluraflix logo" />
+      </Link>
 
-      <Button as="a" href="/">
+      <Button as={Link} to="/register/video">
         Novo vídeo
       </Button>
-    </Menu>
+    </nav>
   );
 }
 
