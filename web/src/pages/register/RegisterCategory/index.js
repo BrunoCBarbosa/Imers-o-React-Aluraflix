@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
+import TextAreaField from '../../../components/TextAreaField';
 
 function RegisterCategory(){
   const initialValues = {
@@ -47,12 +48,7 @@ function RegisterCategory(){
       <form onSubmit={handleSubmit}>
         <FormField label="Nome: " type="text" name="name" value={values.name} onChange={handleChange}/>
 
-        <div>
-          <label>
-            Descrição:
-            <textarea name="description" value={values.description} onChange={handleChange}/>
-          </label>
-        </div>
+        <TextAreaField label="Descrição: " rows="2" cols="20" value={values.description} onChange={handleChange}/>
 
         <FormField label="Cor: " type="color" name="color" value={values.color} onChange={handleChange} />
 
