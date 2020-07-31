@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "id" : 1,
+      "name" : "Hiragana",
+      "description" : "Aprender Hiragana",
+      "color" : "#cbd1ff"
+    },
+    {
+      "id" : 2,
+      "name" : "Katakana",
+      "description" : "Aprender Katakana",
+      "color" : "#cbd1ff"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import TextAreaField from '../../../components/TextAreaField';
+import Button from '../../../components/Button';
 
 function RegisterCategory(){
   const initialValues = {
@@ -41,6 +41,18 @@ function RegisterCategory(){
       [key]: value
     })
   }
+
+  useEffect(() => {
+    const URL = 'http://localhost:3300/categories';
+
+    fetch(URL)
+    .then(async (serverResponse) => {
+      const res = await serverResponse.json();
+      setCategories([
+        ...res
+      ]);
+    });
+  }, []);
   
   return(
     <PageDefault>
@@ -48,14 +60,18 @@ function RegisterCategory(){
       <form onSubmit={handleSubmit}>
         <FormField label="Nome: " type="text" name="name" value={values.name} onChange={handleChange}/>
 
-        <TextAreaField label="Descrição: " rows="2" cols="20" value={values.description} onChange={handleChange}/>
+        <FormField label="Descrição: " type="textarea" name="description" value={values.description} onChange={handleChange}/>
 
         <FormField label="Cor: " type="color" name="color" value={values.color} onChange={handleChange} />
 
-        <button>
+        <Button>
           Cadastrar
-        </button>
+        </Button>
       </form>
+
+      {categories.length === 0 && <div>
+        Loading...
+      </div>}
 
       <ul>
         {categories.map((category) => {
