@@ -1,16 +1,88 @@
 {
   "categories": [
     {
-      "id" : 1,
-      "name" : "Hiragana",
-      "description" : "Aprender Hiragana",
-      "color" : "#cbd1ff"
+      "id": 1,
+      "title": "Hiragana",
+      "description": "Aprender Hiragana",
+      "color": "#68D1FF"
     },
     {
-      "id" : 2,
-      "name" : "Katakana",
-      "description" : "Aprender Katakana",
-      "color" : "#cbd1ff"
+      "id": 2,
+      "title": "Katakana",
+      "description": "Aprender Katakana",
+      "color": "#00C86F"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "title": "Aprenda Hiragana em uma semana",
+      "url": "https://www.youtube.com/watch?v=DnmayTs3VJo"
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "title": "Aula 03: Como ler o Katakana",
+      "url": "https://www.youtube.com/watch?v=d9BpFHwBmw4"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "title": "Aula dde Japonês (Aprender Hiragana de um jeito fácil)",
+      "url": "https://www.youtube.com/watch?v=tv2OOp3ycRE"
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "title": "Aula 01: Hiragana (Alfabeto Japonês)",
+      "url": "https://www.youtube.com/watch?v=C3Cn3G4ia00",
+      "categoryId": 1,
+      "id": 6
+    },
+    {
+      "title": "Começando a aprender Japonês",
+      "url": "https://www.youtube.com/watch?v=PsJwRmYd9kU",
+      "categoryId": 1,
+      "id": 7
+    },
+    {
+      "title": "Vamos ler Katakana",
+      "url": "https://www.youtube.com/watch?v=kbZENDQm09c",
+      "categoryId": {
+        "id": 2,
+        "title": "Katakana",
+        "description": "Aprender Katakana",
+        "color": "#00C86F"
+      },
+      "id": 8
+    },
+    {
+      "title": "Vamos Ler Katakana",
+      "url": "https://www.youtube.com/watch?v=kbZENDQm09c",
+      "categoryId": {
+        "id": 2,
+        "title": "Katakana",
+        "description": "Aprender Katakana",
+        "color": "#00C86F"
+      },
+      "id": 9
+    },
+    {
+      "title": "Vamos Ler Katakana",
+      "url": "https://www.youtube.com/watch?v=C3Cn3G4ia00",
+      "categoryId": 2,
+      "id": 10
+    },
+    {
+      "title": "Vamos Ler Katakana",
+      "url": "https://www.youtube.com/watch?v=kbZENDQm09c",
+      "categoryId": 2,
+      "id": 11
     }
   ]
 }

@@ -1,46 +1,54 @@
-import React from 'react';
-import styled from 'styled-components'
+import React, { useEffect, useState } from 'react';
 
-import Header from '../../components/Header'
-import initialDatas from '../../data/initial_datas.json'
+import PageDefault from '../../components/PageDefault'
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer'
-
-const HomeWrapper = styled.div `
-  background: var(--grayDark);
-`;
+import repositoryCategories from '../../repositories/categories'
 
 function Home() {
+  const [initialDatas, setInitialDatas] = useState([]);
+
+  useEffect(() => {
+    repositoryCategories.getAllWithVideos()
+      .then((categoriesWithVideos) => {
+        setInitialDatas(categoriesWithVideos)
+      })
+      .catch((err) => {
+        console.log(err.message)
+      },[])
+  
+  })
+
+
   return (
 
-    <HomeWrapper>
-      <Header />
+    <PageDefault paddingAll={0}>
+      {initialDatas.length === 0 && (<div>Loading...</div>)}
 
-      <BannerMain
-        videoTitle={initialDatas.categories[0].videos[3].title}
-        url={initialDatas.categories[0].videos[3].url}
-        videoDescription={"Para algumas pessoas, a língua japonesa parece ser tão complicada que fica difícil saber por onde começar. Aperte play que eu te mostro como fazer isso."} 
-      />
+      {initialDatas.map((category, index) => {
+        if(index === 0){
+          return(
+            <div key={category.id}>
+              <BannerMain
+                videoTitle={initialDatas[0].videos[0].title}
+                url={initialDatas[0].videos[0].url}
+                videoDescription={"Para algumas pessoas, a língua japonesa parece ser tão complicada que fica difícil saber por onde começar. Aperte play que eu te mostro como fazer isso."} 
+                />
 
-      <Carousel 
-        category={initialDatas.categories[0]}
-      />
-      <Carousel 
-        category={initialDatas.categories[1]}
-      />
-      <Carousel 
-        category={initialDatas.categories[2]}
-      />
-      <Carousel 
-        category={initialDatas.categories[3]}
-      />
-      <Carousel 
-        category={initialDatas.categories[4]}
-      />
-      
-      <Footer />   
-    </HomeWrapper>
+                <Carousel 
+                  category={initialDatas[0]}
+                />
+            </div>
+          );
+        }
+        return(
+          <Carousel
+            key={category.id}
+            category={category} 
+          />
+        )
+      })}
+    </PageDefault>
   );
 }
 
