@@ -43,7 +43,9 @@ function RegisterCategory(){
   }
 
   useEffect(() => {
-    const URL = 'http://localhost:3300/categories';
+    const URL = window.location.hostname.includes('localhost') 
+      ? 'http://localhost:3300/categories'
+      : 'https://nihonflix.herokuapp.com/categories';
 
     fetch(URL)
     .then(async (serverResponse) => {
