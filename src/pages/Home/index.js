@@ -15,16 +15,16 @@ function Home() {
       })
       .catch((err) => {
         console.log(err.message)
-      },[])
+      })
   
-  })
-
-
+  },[])
+  
+  
   return (
 
     <PageDefault paddingAll={0}>
       {initialDatas.length === 0 && (<div>Loading...</div>)}
-
+      
       {initialDatas.map((category, index) => {
         if(index === 0){
           return(
