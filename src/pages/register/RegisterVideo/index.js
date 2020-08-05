@@ -28,29 +28,27 @@ function RegisterVideo(){
       });
   }, []);
 
+  function handleSubmit(event){
+    event.preventDefault();
+
+    const choosenCategory = categories.find((category) => {
+      return category.title === values.category
+    })
+    
+    videosRepository.create({
+      title: values.title,
+      url: values.url,
+      categoryId: choosenCategory.id
+    }).then(() => {
+      history.push('/');
+    })
+  }
+
   return(
     <PageDefault>
       <h1>Cadastro de Video</h1>
 
-      <form onSubmit={(event) => {
-        event.preventDefault();
-
-        const choosenCategory = categories.find((category) => {
-          return category.title === values.category
-        })
-
-        console.log(choosenCategory)
-
-        videosRepository.create({
-          title: values.title,
-          url: values.url,
-          categoryId: choosenCategory.id
-        })
-          .then(() => {
-            history.push('/');
-          })
-
-      }}>
+      <form onSubmit={handleSubmit}>
         <FormField label="Título: " name="title" value={values.title} onChange={handleChange}/>
 
         <FormField label="URL: " name="url" value={values.url} onChange={handleChange}/>
@@ -61,15 +59,12 @@ function RegisterVideo(){
           Cadastrar
         </Button>
       </form>
-
-
-
+      
       <Link to="/register/category">
         Cadastrar Categoria
       </Link>
     </PageDefault>
   );
-  
 }
 
 export default RegisterVideo;

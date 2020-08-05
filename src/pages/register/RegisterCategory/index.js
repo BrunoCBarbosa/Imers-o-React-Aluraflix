@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriesRepository from '../../../repositories/categories';
 
 
 function RegisterCategory(){
@@ -15,36 +16,22 @@ function RegisterCategory(){
   }
 
   const { handleChange, values, clearForm } = useForm(initialValues)
-
-  const [categories, setCategories] = useState([]);
+  const history = useHistory();
   
   function handleSubmit(e){
     e.preventDefault();
-    
-    setCategories([
-      ...categories,
-      values
-    ])
 
-    
+    categoriesRepository.create({
+      title: values.title,
+      description: values.description,
+      color: values.color
+    }).then(() => {
+      history.push('/')
+    })
+
     clearForm(initialValues)
   }
 
-
-  useEffect(() => {
-    const URL = window.location.hostname.includes('localhost') 
-      ? 'http://localhost:3300/categories'
-      : 'https://nihonflix.herokuapp.com/categories';
-
-    fetch(URL)
-      .then(async (serverResponse) => {
-        const res = await serverResponse.json();
-        setCategories([
-          ...res
-        ]);
-      });
-  },[]);
-  
   return(
     <PageDefault>
       <h1>Cadastro de Categoria: {values.title}</h1>
@@ -59,20 +46,6 @@ function RegisterCategory(){
           Cadastrar
         </Button>
       </form>
-
-      {categories.length === 0 && <div>
-        Loading...
-      </div>}
-
-      <ul>
-        {categories.map((category) => {
-          return(
-            <li key={category.id}>
-              {category.title}
-            </li>
-          )
-        })}
-      </ul>
 
       <Link to="/">
         Ir para home
